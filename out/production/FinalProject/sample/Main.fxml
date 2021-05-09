@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="530.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller">
+   <children>
+      <AnchorPane layoutX="37.0" layoutY="38.0" prefHeight="488.0" prefWidth="200.0" style="-fx-background-color: #D6CF72;">
+         <children>
+            <Button layoutX="7.0" layoutY="64.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="178.0" text="Products" />
+            <Button layoutX="7.0" layoutY="109.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="178.0" text="Sell" />
+         </children>
+      </AnchorPane>
+      <AnchorPane accessibleText="dfds" prefHeight="44.0" prefWidth="774.0" style="-fx-background-color: #F7C245;">
+         <children>
+            <Label layoutX="279.0" layoutY="6.0" prefHeight="35.0" prefWidth="178.0" text="Inventory system" textFill="#111111">
+               <font>
+                  <Font name="Consolas Bold" size="17.0" />
+               </font>
+            </Label>
+            <MenuBar layoutX="22.0" layoutY="3.0" prefHeight="41.0" prefWidth="200.0" style="-fx-background-color: #F7C245;">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="8.0" layoutY="99.0" prefHeight="244.0" prefWidth="29.0">
+         <children>
+
+         </children>
+      </AnchorPane>
+      <Pane layoutX="244.0" layoutY="54.0" prefHeight="466.0" prefWidth="520.0" style="-fx-background-color: #F7EBED;" />
+      <Pane layoutX="241.0" layoutY="48.0" prefHeight="482.0" prefWidth="533.0" style="-fx-background-color: #F7EBED;">
+         <children>
+            <Button layoutX="22.0" layoutY="25.0" mnemonicParsing="false" onAction="#addItem" prefHeight="30.0" prefWidth="103.0" text="Add item" />
+            <TextField layoutX="133.0" layoutY="25.0" prefHeight="26.0" prefWidth="267.0" style="-fx-background-color: white;" />
+            <Button layoutX="400.0" layoutY="23.0" mnemonicParsing="false" text="Search" />
+            <TableView fx:id="producTable" editable="true" layoutX="15.0" layoutY="95.0" prefHeight="336.0" prefWidth="520.0" style="-fx-background-color: #F0DDE0;" tableMenuButtonVisible="true">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="75.0" text="Product id" />
+                <TableColumn fx:id="name" prefWidth="75.0" text="Name" />
+                  <TableColumn fx:id="costPrice" prefWidth="75.0" text="Cost Price" />
+                  <TableColumn fx:id="quantity" prefWidth="75.0" text="Quantity" />
+                  <TableColumn fx:id="registeredDate" prefWidth="75.0" text="Registered date" />
+                  <TableColumn fx:id="totalPrice" prefWidth="75.0" text="Totall price" />
+                  <TableColumn fx:id="delete" prefWidth="75.0" text="Delete" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>
